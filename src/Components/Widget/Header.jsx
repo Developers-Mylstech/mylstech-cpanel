@@ -4,6 +4,7 @@ import { FiBell, FiMail, FiSettings, FiTool, FiUser } from 'react-icons/fi';
 import { MdEmail } from 'react-icons/md';
 import { TbHierarchy } from 'react-icons/tb';
 import { NavLink } from 'react-router-dom';
+import logo from "../../assets/blueLogo.png"
 
 const navItems = [
     { label: 'Services', path: '/', icon: <TbHierarchy /> },
@@ -13,12 +14,13 @@ const navItems = [
 ];
 
 export default function Header() {
-    return (
-        <div className="bg-lightgray px-4 md:px-8 py-3  flex justify-between items-center border rounded-full my-2  mx-auto">
-            <div className="flex items-center space-x-2">
-                {/* <img src="/logo.png" alt="logo" className="h-10 w-auto" /> */}
-                <span className="text-sm text-textDark font-semibold">MYLS TECH</span>
-            </div>
+  return (
+    <div className="bg-lightgray px-4 md:px-8 py-3  flex justify-between items-center border rounded-full my-2  mx-auto">
+      <div className="flex items-center space-x-2">
+        {/* <img src="/logo.png" alt="logo" className="h-10 w-auto" /> */}
+        {/* <span className="text-sm text-textDark font-semibold">MYLS TECH</span> */}
+        <img src={logo} className='h-6 w-auto' alt="" />
+      </div>
 
             <div className=" flex items-center md:space-x-4 gap-1 ">
                 {navItems.map(({ label, path, icon }) => (
