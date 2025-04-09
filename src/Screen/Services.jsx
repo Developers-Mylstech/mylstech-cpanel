@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Services() {
   return (
-    <div>
+    <section className='w-full border'>
       Services
-    </div>
+    </section>
   )
 }
