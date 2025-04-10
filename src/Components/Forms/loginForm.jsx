@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function LoginForm() {
+export default function LoginForm({setShowForget}) {
   const navigate = useNavigate()
   return (
-    <div className=" flex flex-col items-center justify-start gap-10 h-auto  bg-gradient-to-br from-indigo-50 to-indigo-200 rounded-tr-2xl rounded-br-2xl px-4">
+    <div className=" flex flex-col items-center justify-start gap-10 h-auto   rounded-tr-2xl rounded-br-2xl px-4">
 
-      <h1 className='text-3xl font-bold text-center text-gray-600 my-6'><span className='text-pri'>Welcome Back,</span> nice to see you again</h1>
+      <h1 className='md:text-4xl text-3xl font-bold text-center text-pri'><span className='text-gray-600'>Welcome to</span> Mylstech</h1>
       <div className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-pri mb-6">Login</h2>
         <form className="space-y-6">
@@ -39,6 +39,7 @@ export default function LoginForm() {
           </button>
           <button
             type="submit"
+            onClick={()=>setShowForget(true)}
             className=" py-2 px-4 bg-indigo-100  text-pri font-semibold rounded-lg shadow-md transition duration-300"
           >
             Forget Password

@@ -27,9 +27,11 @@ import LoginForm from '../Components/Forms/LoginForm';
 import SignupForm from '../Components/Forms/SignupForm';
 import logo from "../assets/logo.png"
 import bluelogo from "../assets/blueLogo.png"
+import ForgetPasswordForm from '../Components/Forms/ForgotPassword';
 
 export default function Login() {
   const [activeTab, setActiveTab] = useState('login');
+  const [showForget, setShowForget] = useState(false)
 
   return (
     <div className="grid md:grid-cols-2 grid-cols-1  w-full md:my-9 my-0 rounded-2xl min-h-[90vh]">
@@ -60,7 +62,7 @@ export default function Login() {
       {/* Right side with tabs and form */}
       <div className="flex flex-col justify-center items-center w-full md:h-[90vh] h-[100vh] bg-gradient-to-br from-indigo-50 to-indigo-200 md:rounded-tr-2xl md:rounded-br-2xl">
       <img src={bluelogo} alt="" className='text-center  h-14 w-auto md:hidden block mb-10 ' />
-        <div className="grid grid-cols-2 w-full gap-4 px-4  mb-6 ">
+        {/* <div className="grid grid-cols-2 w-full gap-4 px-4  mb-6 ">
           <button
             className={`px-6 py-2  font-medium transition duration-300 ${
               activeTab === 'login'
@@ -81,9 +83,9 @@ export default function Login() {
           >
             Sign Up
           </button>
-        </div>
+        </div> */}
 
-        {activeTab === 'login' ? <LoginForm /> : <SignupForm />}
+        {showForget == true ? <ForgetPasswordForm setShowForget={setShowForget}/>:  <LoginForm setShowForget={setShowForget}  /> }
       </div>
     </div>
   );
