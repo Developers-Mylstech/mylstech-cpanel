@@ -340,7 +340,7 @@ export default function Services() {
                     Add New
                 </button>
             </div>
-            <Dialog  visible={dialogVisible} className='md:w-1/2 mx-2 h-fit' blockScroll draggable={false} onHide={()=>setDialogVisible(false)}>
+            <Dialog  visible={dialogVisible} className='lg:w-1/2  md:w-[80%] w-[90%] mx-2 h-fit' blockScroll draggable={false} onHide={()=>setDialogVisible(false)}>
                 <ServiceForm passedData={selectedItem} />
 
             </Dialog>
