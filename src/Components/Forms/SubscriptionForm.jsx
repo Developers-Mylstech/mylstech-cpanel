@@ -129,6 +129,7 @@ export default function SubscriptionForm({ initialData }) {
                 label="Submit"
                 className="w-full bg-pri border-none text-white py-2 px-4 rounded-lg text-sm uppercase"
             />
+            
         </div>
     );
 }
