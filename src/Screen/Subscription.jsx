@@ -84,18 +84,18 @@ export default function Subscription() {
 
   return (
     <section className="bg-cover bg-center relative">
-      <div className="flex justify-between items-center my-3 gap-4">
-        <div className="flex border border-gray-300 rounded-md overflow-hidden">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-end md:items-center my-3 gap-4">
+        <div className="flex  border border-gray-300 rounded-md overflow-hidden w-full md:w-fit">
           <button
             onClick={() => setActiveTab('monthly')}
-            className={`px-5 py-2 text-sm font-medium transition-colors duration-200 ${activeTab === 'monthly' ? 'bg-pri text-white' : 'text-gray-700 hover:bg-gray-100'
+            className={`px-5 py-2 w-1/2 md:w-64 text-sm font-medium transition-colors duration-200 ${activeTab === 'monthly' ? 'bg-pri text-white' : 'text-gray-700 hover:bg-gray-100'
               }`}
           >
             Monthly Plans
           </button>
           <button
             onClick={() => setActiveTab('yearly')}
-            className={`px-5 py-2 text-sm font-medium transition-colors duration-200 ${activeTab === 'yearly' ? 'bg-pri text-white' : 'text-gray-700 hover:bg-gray-100'
+            className={`px-5 py-2 w-1/2 md:w-64 text-sm font-medium transition-colors duration-200 ${activeTab === 'yearly' ? 'bg-pri text-white' : 'text-gray-700 hover:bg-gray-100'
               }`}
           >
             Yearly Plans

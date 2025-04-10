@@ -58,9 +58,7 @@ export default function SubscriptionForm({ initialData }) {
                     onChange={(e) => setImage(e.target.files[0])}
                     className="w-full text-gray-600"
                 />
-                {/* {typeof image === 'string' && (
-                    <img src={image} alt="Plan" className="mt-2 w-24 rounded" />
-                )} */}
+                
             </div>
 
             {/* Title */}
@@ -90,7 +88,6 @@ export default function SubscriptionForm({ initialData }) {
                 />
             </div>
 
-            {/* Trial Days */}
             <InputNumber
                 value={trialDays}
                 onValueChange={(e) => setTrialDays(e.value)}
@@ -98,7 +95,7 @@ export default function SubscriptionForm({ initialData }) {
                 className="w-full border-0 border-b-2 p-3 border-gray-300 focus:border-blue-500 focus:ring-0 rounded-none"
             />
 
-            {/* Features */}
+
             <InputTextarea
                 value={features}
                 onChange={(e) => setFeatures(e.target.value)}
@@ -107,7 +104,6 @@ export default function SubscriptionForm({ initialData }) {
                 className="w-full border-0 border-b-2 p-3 border-gray-300 focus:border-blue-500 focus:ring-0 rounded-none"
             />
 
-            {/* Monthly / Yearly */}
             <div className="flex items-center gap-6 mb-4">
                 <label className="flex items-center gap-2 text-gray-600">
                     <input
@@ -129,11 +125,11 @@ export default function SubscriptionForm({ initialData }) {
                 </label>
             </div>
 
-            {/* Submit */}
             <Button
                 label="Submit"
                 className="w-full bg-pri border-none text-white py-2 px-4 rounded-lg text-sm uppercase"
             />
+            
         </div>
     );
 }
