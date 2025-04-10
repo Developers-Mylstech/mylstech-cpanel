@@ -31,7 +31,7 @@ export default function LoginForm({setShowForget}) {
           </div>
           <div className='grid md:grid-cols-2 grid-cols-1 gap-2'>
           <button
-            onClick={()=>navigate("/services")}
+            onClick={()=>navigate("/")}
             type="submit"
             className="w-full py-2 px-3 bg-pri hover:bg-pri text-white font-semibold rounded-lg shadow-md transition duration-300"
           >

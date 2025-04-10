@@ -16,7 +16,7 @@ export default function Header({navItems}) {
     const settingItems = [
         { label: 'Profile', icon: 'pi pi-user', path:""  },
         { label: 'Settings', icon: 'pi pi-cog', path:""},
-        { label: 'Logout', icon: 'pi pi-sign-out' ,path :"/" }
+        { label: 'Logout', icon: 'pi pi-sign-out' ,path :"/login" }
     ];
 
     return (
@@ -54,7 +54,7 @@ export default function Header({navItems}) {
                     <OverlayPanel ref={op} className="w-40 shadow-md rounded-md">
                         <ul className="text-sm text-gray-700">
                             {settingItems.map(item => (
-                                <li onClick={()=>navigate('/')} key={item.label} className="px-4 py-2 rounded-lg hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+                                <li onClick={()=>navigate(item.path)} key={item.label} className="px-4 py-2 rounded-lg hover:bg-gray-100 cursor-pointer flex items-center gap-2">
                                     <i className={item.icon}></i> {item.label}
                                 </li>
                             ))}
