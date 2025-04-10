@@ -14,11 +14,11 @@ export default function Login() {
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
         <img
           className="h-full w-full object-cover -z-1"
-          src="https://img.freepik.com/free-vector/gradient-connection-background_23-2150462053.jpg?t=st=1744182115~exp=1744185715~hmac=a2a1aa037a4b1c323e09d9a0ab22ff416c05932ddaa2b37787a75a97bb638ec6&w=1380"
+          src="https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg?t=st=1744279877~exp=1744283477~hmac=086d796dc9120f45dc5d66da4577a7ce4ff51b565b321240da766b4bd3f8fa1f&w=2000"
           alt=""
         />
         <img src={logo} alt="" className='absolute bottom-4 h-14 w-auto z-20' />
-        <div className='text-6xl font-bold absolute z-20 top-8 left-5'>
+        <div className='lg:text-7xl md:text-4xl font-bold absolute z-20 top-8 left-5'>
           <h2
             style={{
               WebkitTextStroke: '1px lightgray',
