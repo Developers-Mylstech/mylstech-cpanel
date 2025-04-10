@@ -10,18 +10,17 @@ function App() {
   return (
     <Router>
       <Routes>
-
         <Route path="/" element={<Login />} />
 
-        <Route path="/" element={<Layout />}>
+        <Route element={<Layout />}>
           <Route path="services" element={<Services />} />
           <Route path="subscription" element={<Subscription />} />
           <Route path="about" element={<About />} />
           <Route path="additional" element={<Additional />} />
         </Route>
-
       </Routes>
     </Router>
+
   );
 }
 

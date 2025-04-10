@@ -9,7 +9,7 @@ import BottomNav from './BottomNav';
 
 export default function Layout() {
   const navItems = [
-    { label: 'Services', path: '/services', icon: <TbHierarchy /> },
+    { label: 'Services', path: 'services', icon: <TbHierarchy /> },
     { label: 'Subscription', path: '/subscription', icon: <FaCrown /> },
     { label: 'About', path: '/about', icon: <FiUser /> },
     { label: 'Additional', path: '/additional', icon: <IoGrid /> },
