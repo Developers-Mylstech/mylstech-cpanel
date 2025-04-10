@@ -137,7 +137,7 @@ export default function Subscription() {
 
       <Sidebar
         position='right'
-        className='w-1/3'
+        className='md:w-1/3 w-10/12'
         blockScroll={true}
         visible={visible}
         onHide={() => setVisible(false)}

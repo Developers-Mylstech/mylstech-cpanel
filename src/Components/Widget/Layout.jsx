@@ -16,10 +16,11 @@ export default function Layout() {
   ];
   return (
     <div className='0 relative '>
-      <div className='mx-4'>
+      <div className='mx-4 mb-20 md:m-0'>
         <Header navItems={navItems} />
         <Outlet />
       </div>
+      
       <BottomNav navItems={navItems} />
     </div>
   )
