@@ -11,10 +11,10 @@ function App() {
     <Router>
       <Routes>
 
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
 
-        <Route path="/" element={<Layout />}>
-          <Route path="services" element={<Services />} />
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Services />} />
           <Route path="subscription" element={<Subscription />} />
           <Route path="about" element={<About />} />
           <Route path="additional" element={<Additional />} />
