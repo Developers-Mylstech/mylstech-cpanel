@@ -33,22 +33,27 @@ export default function Layout() {
 
   return (
     <div className="relative min-h-screen">
-      <button
-        className="md:hidden sticky top-4 left-4 z-50 bg-white rounded-lg p-2 "
-        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-      >
-        {isSidebarOpen ? <RxCross2 size={20} /> : <FiMenu size={20} />}
-      </button>
+      <div className='bg-white/50 backdrop-blur-sm h-14 p-3 fixed top-0 w-full'>
+        {!isSidebarOpen && (
+
+          <button
+            className="md:hidden top-4 left-4 z-50 bg-white rounded-lg p-2"
+            onClick={() => setIsSidebarOpen(true)}
+          >
+            <FiMenu size={20} />
+          </button>
+        )}
+      </div>
 
       <div
         className={`fixed top-0 left-0 scrollbar-hide h-full w-64 bg-white overflow-y-auto z-40 transform transition-transform duration-300 
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
         md:translate-x-0`}
       >
-        <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}  navItems={{websiteNavItems,webappNavItems}}  />
+        <Sidebar navItems={{ websiteNavItems, webappNavItems, setIsSidebarOpen }} />
       </div>
 
-      <div className="p-4 md:ml-64">
+      <div className="px-4 md:ml-64 mt-16">
         <Outlet />
       </div>
 

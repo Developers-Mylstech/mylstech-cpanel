@@ -7,11 +7,10 @@ import bluelogo from "../../assets/blueLogo.png"
 import ForgetPasswordForm from '../../Components/Forms/ForgotPassword';
 
 export default function Login() {
-  const [activeTab, setActiveTab] = useState('login');
   const [showForget, setShowForget] = useState(false)
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1  w-full md:my-9 my-0 rounded-2xl min-h-[90vh]">
+    <div className="grid md:grid-cols-2 grid-cols-1 rounded-2xl min-h-[90vh] m-5">
       <div className="relative rounded-tl-2xl rounded-bl-2xl overflow-hidden hidden md:block">
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
         <img

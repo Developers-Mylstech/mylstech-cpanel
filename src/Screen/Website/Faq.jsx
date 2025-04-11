@@ -251,7 +251,7 @@ export default function FaqTable() {
   };
 
   return (
-    <div className=" p-4">
+    <div className="">
       <div className="flex justify-between items-center mb-4">
         <h2 className='md:text-2xl text-xl font-semibold'>FAQs List</h2>
         <button
