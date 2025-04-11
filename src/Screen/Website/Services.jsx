@@ -400,7 +400,7 @@ export default function Services() {
     return (
         <section className="w-full mx-auto ">
             <div className="flex justify-end">
-                <button onClick={()=>setDialogVisible(true)} className="bg-blue-500 uppercase px-10 py-1 my-3 text-white text-sm font-semibold rounded-lg">
+                <button onClick={()=>setDialogVisible(true)} className="bg-blue-800 uppercase px-10 py-1 my-3 text-white text-sm font-semibold rounded-lg">
                     Add New
                 </button>
             </div>

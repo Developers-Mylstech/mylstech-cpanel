@@ -14,6 +14,7 @@ import AccessRights from './Screen/WebApp/AccessRights';
 import Subscription from './Screen/WebApp/Subscription';
 import About from './Screen/Website/About';
 import Contact from './Screen/Website/Contact';
+import Faq from './Screen/Website/Faq';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           {/* <Route index element={<Home />} /> */}
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="faq" element={<Faq />} />
 
           {/* MANAGEMENT ROUTES */}
           <Route path="customer" element={<Customer />} />

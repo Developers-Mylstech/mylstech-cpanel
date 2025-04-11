@@ -6,6 +6,8 @@ import { FiUser, FiMenu } from 'react-icons/fi';
 import { IoGrid } from 'react-icons/io5';
 import Sidebar from './Sidebar';
 import { RxCross2 } from 'react-icons/rx';
+import { BsQuestionCircleFill } from "react-icons/bs";
+
 
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -13,7 +15,8 @@ export default function Layout() {
   const websiteNavItems = [
     { label: 'Home', path: '/', icon: <TbHierarchy /> },
     { label: 'About', path: '/about', icon: <FiUser /> },
-    { label: 'Contact', path: '/contact', icon: <IoGrid /> }
+    { label: 'Contact', path: '/contact', icon: <IoGrid /> },
+    { label: 'Faqs', path: '/faq', icon: <BsQuestionCircleFill /> }
   ];
 
 
