@@ -16,6 +16,7 @@ import About from './Screen/Website/About';
 import Contact from './Screen/Website/Contact';
 import Dashboard from './Screen/Dashboard';
 import Home from './Screen/Website/Home';
+import Faq from './Screen/Website/Faq';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='home' element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="faq" element={<Faq />} />
 
           {/* MANAGEMENT ROUTES */}
           <Route path="customer" element={<Customer />} />

@@ -7,6 +7,8 @@ import { IoGrid } from 'react-icons/io5';
 import Sidebar from './Sidebar';
 import { RxCross2 } from 'react-icons/rx';
 import { RiDashboardHorizontalFill, RiHome5Line } from 'react-icons/ri';
+import { BsQuestionCircleFill } from "react-icons/bs";
+
 
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,7 +17,8 @@ export default function Layout() {
     { label: 'Dashobard', path: '/', icon: <RiDashboardHorizontalFill /> },
     { label: 'Home', path: '/home', icon: <RiHome5Line /> },
     { label: 'About', path: '/about', icon: <FiUser /> },
-    { label: 'Contact', path: '/contact', icon: <IoGrid /> }
+    { label: 'Contact', path: '/contact', icon: <IoGrid /> },
+    { label: 'Faqs', path: '/faq', icon: <BsQuestionCircleFill /> }
   ];
 
 

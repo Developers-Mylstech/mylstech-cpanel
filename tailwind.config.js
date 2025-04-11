@@ -11,7 +11,7 @@ export default {
         pri: {
           DEFAULT: '#1F3A8A',
         },
-        lightpri: '#e7f1fe',  
+        lightpri: '#EAF3FE',  
         gray: {
           DEFAULT: '#F0F0F0', 
         },

@@ -161,7 +161,7 @@ export default function About() {
                 className="h-full w-full object-cover rounded-md"
               />
               <button
-                className="absolute top-1 right-1 bg-[#2F80ED] border border-gray-300 rounded-full p-1 shadow-md hover:bg-gray-100"
+                className="absolute top-1 right-1 bg-[#2F80ED] border border-gray-300 rounded-full p-1 shadow-md "
                 title="Update Image"
                 onClick={() => handleImageClick(3)}
               >
