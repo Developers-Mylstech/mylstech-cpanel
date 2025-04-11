@@ -45,7 +45,7 @@ export default function Layout() {
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
         md:translate-x-0`}
       >
-        <Sidebar navItems={{websiteNavItems,webappNavItems}}  />
+        <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}  navItems={{websiteNavItems,webappNavItems}}  />
       </div>
 
       <div className="p-4 md:ml-64">

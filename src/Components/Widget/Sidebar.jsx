@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import logo from '../../assets/blueLogo.png';
 
-export default function Sidebar({ navItems }) {
+export default function Sidebar({ navItems, setIsSidebarOpen,isSidebarOpen }) {
 
     const op = useRef(null);
     const navigate = useNavigate();
@@ -31,6 +31,7 @@ export default function Sidebar({ navItems }) {
                         <NavLink
                             key={label}
                             to={path}
+                            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-pri text-white shadow' : 'text-gray-500 hover:bg-white hover:text-black'
                                 }`
@@ -45,6 +46,7 @@ export default function Sidebar({ navItems }) {
                         <NavLink
                             key={label}
                             to={path}
+                            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm 
                       ${isActive ? 'ml-3 font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
