@@ -51,7 +51,7 @@ export default function Header({navItems}) {
                     >
                         <FiSettings size={16} />
                     </button>
-                    <OverlayPanel ref={op} className="w-40 shadow-md rounded-md">
+                    <OverlayPanel ref={op} className="w-40 shadow-md rounded-md ">
                         <ul className="text-sm text-gray-700">
                             {settingItems.map(item => (
                                 <li onClick={()=>navigate(item.path)} key={item.label} className="px-4 py-2 rounded-lg hover:bg-gray-100 cursor-pointer flex items-center gap-2">

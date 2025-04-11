@@ -2,6 +2,7 @@ import { Dialog } from 'primereact/dialog';
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronRight, FiEdit2 } from 'react-icons/fi';
 import ServiceForm from '../Components/Forms/ServiceForm';
+import { FileUpload } from 'primereact/fileupload';
 
 
 
