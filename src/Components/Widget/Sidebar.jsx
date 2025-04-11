@@ -15,18 +15,18 @@ export default function Sidebar({ navItems }) {
     ];
 
     return (
-        <div className="w-64 bg-lightpri border-r flex flex-col justify-between relative mx-auto items-center">
+        <div className="w-64 min-h-screen bg-lightpri border-r flex flex-col justify-between relative mx-auto items-center">
             <div className="my-6">
                 <img src={logo} className="h-10 w-auto mx-auto" alt="logo" />
             </div>
 
-            <nav className="flex flex-col gap-2 flex-1 w-full p-3 mb-5">
+            <nav className="flex flex-col gap-5 flex-1 w-full p-3 mb-5">
                 {navItems.map(({ label, path, icon }) => (
                     <NavLink
                         key={label}
                         to={path}
                         className={({ isActive }) =>
-                            `flex items-center px-4 py-2 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-white text-black shadow' : 'text-gray-500 hover:bg-white hover:text-black'
+                            `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-white text-black shadow' : 'text-gray-500 hover:bg-white hover:text-black'
                             }`
                         }
                     >

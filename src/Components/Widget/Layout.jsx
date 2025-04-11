@@ -15,13 +15,13 @@ export default function Layout() {
     { label: 'Subscription', path: '/subscription', icon: <FaCrown /> },
     { label: 'About', path: '/about', icon: <FiUser /> },
     { label: 'Additional', path: '/additional', icon: <IoGrid /> },
-    
+   
   ];
 
   return (
     <div className="relative min-h-screen">
       <button
-        className="md:hidden fixed top-4 left-4 z-50 bg-lightpri p-2 rounded shadow"
+        className="md:hidden sticky top-4 left-4 z-50 bg-white rounded-lg p-2 "
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         {isSidebarOpen ? <RxCross2 size={20} /> : <FiMenu size={20} />}
