@@ -15,7 +15,7 @@ export default function Sidebar({ navItems }) {
     ];
 
     return (
-        <div className="w-64 min-h-screen bg-lightpri border-r flex flex-col justify-between relative mx-auto items-center">
+        <div className="w-64 min-h-screen bg-white  border-r flex flex-col justify-between relative mx-auto items-center">
             <div className="my-6">
                 <img src={logo} className="h-10 w-auto mx-auto" alt="logo" />
             </div>
