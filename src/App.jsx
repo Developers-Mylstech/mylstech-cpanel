@@ -1,10 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Components/Widget/Layout';
-import About from './Screen/About';
-import Login from './Screen/Login';
-import Services from './Screen/Services';
-import Subscription from './Screen/Subscription';
-import Additional from './Screen/Additional';
+
+// Website Screens
+
+
+
+// Auth/Login
+import Login from './Screen/Website/Login';
+import Customer from './Screen/WebApp/Customer';
+import Employee from './Screen/WebApp/Employee';
+import Services from './Screen/WebApp/Services';
+import AccessRights from './Screen/WebApp/AccessRights';
+import Subscription from './Screen/WebApp/Subscription';
+import About from './Screen/Website/About';
+import Contact from './Screen/Website/Contact';
 
 function App() {
   return (
@@ -13,14 +22,20 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/" element={<Layout />}>
-          <Route index element={<Services />} />
-          <Route path="subscription" element={<Subscription />} />
+          {/* WEBSITE ROUTES */}
+          {/* <Route index element={<Home />} /> */}
           <Route path="about" element={<About />} />
-          <Route path="additional" element={<Additional />} />
+          <Route path="contact" element={<Contact />} />
+
+          {/* MANAGEMENT ROUTES */}
+          <Route path="customer" element={<Customer />} />
+          <Route path="employee" element={<Employee />} />
+          <Route path="services" element={<Services />} />
+          <Route path="access-rights" element={<AccessRights />} />
+          <Route path="plans" element={<Subscription />} />
         </Route>
       </Routes>
     </Router>
-
   );
 }
 

@@ -1,6 +1,6 @@
 import { Sidebar } from 'primereact/sidebar';
 import React, { useState } from 'react';
-import SubscriptionForm from '../Components/Forms/SubscriptionForm';
+import SubscriptionForm from '../../Components/Forms/SubscriptionForm';
 
 const SubscriptionCard = ({ plan, onEdit }) => (
   <div className="border rounded-2xl text-center flex flex-col space-y-4 p-5 backdrop-blur-3xl bg-gradient-to-r from-pri/10 to-cyan-400/10 bg-opacity-5">

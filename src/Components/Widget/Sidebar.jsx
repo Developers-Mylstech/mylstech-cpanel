@@ -5,6 +5,7 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import logo from '../../assets/blueLogo.png';
 
 export default function Sidebar({ navItems }) {
+ 
     const op = useRef(null);
     const navigate = useNavigate();
 
@@ -21,18 +22,41 @@ export default function Sidebar({ navItems }) {
             </div>
 
             <nav className="flex flex-col gap-5 flex-1 w-full p-3 mb-5">
-                {navItems.map(({ label, path, icon }) => (
+                <span className='font-bold uppercase text-xs'>• Website</span>
+                {navItems?.websiteNavItems?.map(({ label, path, icon }) => (
                     <NavLink
                         key={label}
                         to={path}
                         className={({ isActive }) =>
-                            `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-white text-black shadow' : 'text-gray-500 hover:bg-white hover:text-black'
+                            `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-pri text-white shadow' : 'text-gray-500 hover:bg-white hover:text-black'
                             }`
                         }
                     >
                         <span className="text-lg">{icon}</span>
                         <span className="ml-3 uppercase">{label}</span>
                     </NavLink>
+                ))}
+                <span className='font-bold uppercase text-xs'> Management</span>
+                {navItems?.webappNavItems?.map(({ label, path, icon }) => (
+                   <NavLink
+                   key={label}
+                   to={path}
+                   className={({ isActive }) =>
+                     `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm 
+                      ${isActive ? 'ml-3 font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
+                   }
+                 >
+                   {({ isActive }) => (
+                     <>
+                       <span className="text-lg flex items-center gap-3">
+                         {isActive && "•"}
+                         {icon}
+                       </span>
+                       <span className="ml-3 uppercase">{label}</span>
+                     </>
+                   )}
+                 </NavLink>
+                 
                 ))}
             </nav>
 

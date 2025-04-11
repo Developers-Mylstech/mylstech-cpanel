@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         pri: {
-          DEFAULT: '#2F80ED',
+          DEFAULT: '#1F3A8A',
         },
         lightpri: '#EAF3FE',  
         gray: {
