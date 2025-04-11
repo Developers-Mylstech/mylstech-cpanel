@@ -14,6 +14,8 @@ import AccessRights from './Screen/WebApp/AccessRights';
 import Subscription from './Screen/WebApp/Subscription';
 import About from './Screen/Website/About';
 import Contact from './Screen/Website/Contact';
+import Dashboard from './Screen/Dashboard';
+import Home from './Screen/Website/Home';
 
 function App() {
   return (
@@ -22,8 +24,9 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/" element={<Layout />}>
-          {/* WEBSITE ROUTES */}
-          {/* <Route index element={<Home />} /> */}
+
+          <Route index element={<Dashboard />} />
+          <Route path='home' element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
 

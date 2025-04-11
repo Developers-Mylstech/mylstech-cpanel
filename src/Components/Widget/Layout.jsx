@@ -6,12 +6,14 @@ import { FiUser, FiMenu } from 'react-icons/fi';
 import { IoGrid } from 'react-icons/io5';
 import Sidebar from './Sidebar';
 import { RxCross2 } from 'react-icons/rx';
+import { RiDashboardHorizontalFill, RiHome5Line } from 'react-icons/ri';
 
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const websiteNavItems = [
-    { label: 'Home', path: '/', icon: <TbHierarchy /> },
+    { label: 'Dashobard', path: '/', icon: <RiDashboardHorizontalFill /> },
+    { label: 'Home', path: '/home', icon: <RiHome5Line /> },
     { label: 'About', path: '/about', icon: <FiUser /> },
     { label: 'Contact', path: '/contact', icon: <IoGrid /> }
   ];
