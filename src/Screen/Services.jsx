@@ -298,7 +298,7 @@ export default function Services() {
                                     <h6 className='font-semibold text-lg text-pri'>{item.title}</h6>
                                     <p className='text-sm'>{item.description}</p>
                                     <button className="absolute bottom-2 right-2 bg-white text-pri p-1 rounded-md shadow">
-                                        <FiEdit2 size={18} onClick={() => handleDailogBox(item)}/>
+                                        <FiEdit2 size={18} onClick={() => handleDailogBox(item)} />
                                     </button>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@ export default function Services() {
                                     <h6 className='font-semibold text-lg text-pri'>{item.title}</h6>
                                     <p className='text-sm'>{item.description}</p>
                                     <button className="absolute bottom-2 right-2 bg-white text-pri p-1 rounded-md shadow">
-                                        <FiEdit2 size={18} onClick={() => handleDailogBox(item)}/>
+                                        <FiEdit2 size={18} onClick={() => handleDailogBox(item)} />
                                     </button>
                                 </div>
                             </div>
@@ -335,14 +335,15 @@ export default function Services() {
 
     return (
         <section className="w-full mx-auto ">
+            
             <div className="flex justify-end">
-                <button onClick={()=>setDialogVisible(true)} className="bg-blue-500 uppercase px-10 py-1 my-3 text-white text-sm font-semibold rounded-lg">
+                <button onClick={() => setDialogVisible(true)} className="bg-blue-500 uppercase px-10 py-1 my-3 text-white text-sm font-semibold rounded-lg">
                     Add New
                 </button>
             </div>
-            <Dialog  visible={dialogVisible} className='lg:w-1/2  md:w-[80%] w-[90%] mx-2 h-fit' blockScroll draggable={false} onHide={()=>setDialogVisible(false)}>
-                <ServiceForm passedData={selectedItem} />
 
+            <Dialog visible={dialogVisible} className='lg:w-1/2  md:w-[80%] w-[90%] mx-2 h-fit' blockScroll draggable={false} onHide={() => setDialogVisible(false)}>
+                <ServiceForm passedData={selectedItem} />
             </Dialog>
 
             {servicesData.map((section, index) => {
