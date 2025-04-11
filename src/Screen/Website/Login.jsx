@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-import LoginForm from '../Components/Forms/LoginForm';
-import SignupForm from '../Components/Forms/SignupForm';
-import logo from "../assets/logo.png"
-import bluelogo from "../assets/blueLogo.png"
-import ForgetPasswordForm from '../Components/Forms/ForgotPassword';
+import LoginForm from '../../Components/Forms/LoginForm';
+import SignupForm from '../../Components/Forms/SignupForm';
+import logo from "../../assets/logo.png"
+import bluelogo from "../../assets/blueLogo.png"
+import ForgetPasswordForm from '../../Components/Forms/ForgotPassword';
 
 export default function Login() {
   const [activeTab, setActiveTab] = useState('login');

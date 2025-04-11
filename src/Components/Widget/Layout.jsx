@@ -10,13 +10,21 @@ import { RxCross2 } from 'react-icons/rx';
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const navItems = [
-    { label: 'Services', path: '/', icon: <TbHierarchy /> },
-    { label: 'Subscription', path: '/subscription', icon: <FaCrown /> },
+  const websiteNavItems = [
+    { label: 'Home', path: '/', icon: <TbHierarchy /> },
     { label: 'About', path: '/about', icon: <FiUser /> },
-    { label: 'Additional', path: '/additional', icon: <IoGrid /> },
-   
+    { label: 'Contact', path: '/contact', icon: <IoGrid /> }
   ];
+
+
+  const webappNavItems = [
+    { label: 'Customer', path: '/customer', icon: <FiUser /> },
+    { label: 'Employee', path: '/employee', icon: <FiUser /> },
+    { label: 'Services', path: '/services', icon: <TbHierarchy /> },
+    { label: 'Access Rights', path: '/access-rights', icon: <IoGrid /> },
+    { label: 'Plans', path: '/plans', icon: <FaCrown /> }
+  ];
+
 
   return (
     <div className="relative min-h-screen">
@@ -32,7 +40,7 @@ export default function Layout() {
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
         md:translate-x-0`}
       >
-        <Sidebar navItems={navItems} />
+        <Sidebar navItems={{websiteNavItems,webappNavItems}}  />
       </div>
 
       <div className="p-4 md:ml-64">
