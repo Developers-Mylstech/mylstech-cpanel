@@ -208,7 +208,7 @@ export default function FaqTable() {
   };
 
   return (
-    <div className="overflow-x-auto p-4">
+    <div className="overflow-x-auto">
         <h2 className='md:text-2xl text-xl font-semibold my-4'>FAQs List</h2>
       <table className="min-w-[800px] w-full bg-white rounded-t-lg shadow-md overflow-hidden">
         <thead className="bg-gray-100 text-gray-400 text-left uppercase text-xs">
