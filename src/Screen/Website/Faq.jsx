@@ -76,7 +76,7 @@
 //             <th className="py-3 px-4 font-normal">Image</th>
 //             <th className="py-3 px-4 font-medium">Question</th>
 //             <th className="py-3 px-4 font-normal">Answer</th>
-   
+
 //             <th className="py-3 px-4 font-normal">Actions</th>
 //           </tr>
 //         </thead>
@@ -96,7 +96,7 @@
 //               <td className="py-3 px-4 text-sm text-gray-600">
 //                 {item.answer}
 //               </td>
-              
+
 //               <td className="py-3 px-4 flex gap-2">
 //                 <button
 //                   className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
@@ -262,51 +262,50 @@ export default function FaqTable() {
         </button>
       </div>
 
-     <div className='overflow-x-auto'>
-     <table className="min-w-[800px] w-full bg-white rounded-t-lg shadow-md overflow-hidden">
-        <thead className="bg-gray-100 text-gray-400 text-left uppercase text-xs">
-          <tr>
-            <th className="py-3 px-4 font-normal">Image</th>
-            <th className="py-3 px-4 font-medium">Question / Answer</th>   
-            <th className="py-3 px-4 font-normal">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {faqs.map((item, idx) => (
-            <tr key={idx} className="border-b hover:bg-gray-50">
-              <td className="py-3 px-4">
-                <img
-                  src={typeof item.image === 'string' ? item.image : URL.createObjectURL(item.image)}
-                  alt=""
-                  className="h-16 w-24 object-cover rounded"
-                />
-              </td>
-              <td className="py-3 px-4 font-semibold text-sm text-gray-800">
-                {item.question}
-                <p className='text-gray-400 font-normal text-xs'> {item.answer}</p>
-              </td>
-             
-              
-              <td className="py-3 px-4 flex gap-2">
-                <button
-                  className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
-                  onClick={() => openEditDialog(item, idx)}
-                >
-                  <FiEdit2 />
-                </button>
-                <button
-                  className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
-                  onClick={() => handleDelete(idx)}
-                >
-                  <IoIosTrash />
-                </button>
-              </td>
+      <div className='overflow-x-auto'>
+        <table className="min-w-[800px] w-full bg-white rounded-t-lg shadow-md overflow-hidden">
+          <thead className="bg-gray-100 text-gray-400 text-left uppercase text-xs">
+            <tr>
+              <th className="py-3 px-4 font-normal">Image</th>
+              <th className="py-3 px-4 font-medium">Question / Answer</th>
+              <th className="py-3 px-4 font-normal">Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-     </div>
+          </thead>
+          <tbody>
+            {faqs.map((item, idx) => (
+              <tr key={idx} className="border-b hover:bg-gray-50">
+                <td className="py-3 px-4">
+                  <img
+                    src={typeof item.image === 'string' ? item.image : URL.createObjectURL(item.image)}
+                    alt=""
+                    className="h-16 w-24 object-cover rounded"
+                  />
+                </td>
+                <td className="py-3 px-4 font-semibold text-sm text-gray-800">
+                  {item.question}
+                  <p className='text-gray-400 font-normal text-xs'> {item.answer}</p>
+                </td>
 
+
+                <td className="py-3 px-4 flex gap-2">
+                  <button
+                    className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
+                    onClick={() => openEditDialog(item, idx)}
+                  >
+                    <FiEdit2 />
+                  </button>
+                  <button
+                    className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
+                    onClick={() => handleDelete(idx)}
+                  >
+                    <IoIosTrash />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <Dialog
         header={currentIndex === null ? "Add FAQ" : "Edit FAQ"}
         visible={dialogVisible}

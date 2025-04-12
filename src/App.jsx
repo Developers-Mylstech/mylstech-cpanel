@@ -17,6 +17,8 @@ import Contact from './Screen/Website/Contact';
 import Dashboard from './Screen/Dashboard';
 import Home from './Screen/Website/Home';
 import Faq from './Screen/Website/Faq';
+import Account from './Screen/WebApp/Account';
+import Profile from './Screen/WebApp/Profile';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="access-rights" element={<AccessRights />} />
           <Route path="plans" element={<Subscription />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="account" element={<Account />} />
         </Route>
       </Routes>
     </Router>

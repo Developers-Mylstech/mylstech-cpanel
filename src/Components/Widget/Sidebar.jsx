@@ -1,25 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { FiBell, FiSettings } from 'react-icons/fi';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import logo from '../../assets/blueLogo.png';
 import { RxCross2 } from 'react-icons/rx';
+import { Dialog } from 'primereact/dialog';
+import ProfileUpdateForm from '../../Screen/WebApp/Profile';
 
 export default function Sidebar({ navItems }) {
     const { setIsSidebarOpen } = navItems
     const op = useRef(null);
     const navigate = useNavigate();
+    const [ profileDailog, setProfileDialog]=useState(false)
 
     const settingItems = [
-        { label: 'Profile', icon: 'pi pi-user', path: '' },
-        { label: 'Settings', icon: 'pi pi-cog', path: '' },
+        { label: 'Account', icon: 'pi pi-cog', path: '/account' },
         { label: 'Logout', icon: 'pi pi-sign-out', path: '/login' }
     ];
 
     return (
-        // <div style={{ backgroundImage: "url('https://static.vecteezy.com/system/resources/thumbnails/024/238/800/small/blobs-mesh-gradient-transparent-that-faded-png.png')", backgroundPosition: "top  left" }}
-        //     className="w-64 min-h-screen bg-no-repeat bg-contain  border-r  flex flex-col justify-between relative mx-auto items-center"
-        // >
+
         <div
             className="w-64 min-h-screen bg-no-repeat  bg-contain  border-r 0 flex flex-col justify-between relative mx-auto items-center"
         >
@@ -36,37 +36,36 @@ export default function Sidebar({ navItems }) {
 
 
                 <nav className="flex flex-col gap-5 flex-1 w-full p-3 mb-5">
-                    <span className='font-bold uppercase text-xs'>• Website</span>
+                    <span className='font-bold uppercase text-xs text-pri'>• Website</span>
                     {navItems?.websiteNavItems?.map(({ label, path, icon }) => (
                         <NavLink
                             key={label}
-                            onClick={()=>setIsSidebarOpen(false)}
+                            onClick={() => setIsSidebarOpen(false)}
                             to={path}
-                      
+
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-pri text-white shadow' : 'text-gray-500 hover:bg-white hover:text-black'
                                 }`
                             }
                         >
-                            <span className="text-lg">{icon}</span>
+                            <span className="text-base">{icon}</span>
                             <span className="ml-3 uppercase">{label}</span>
                         </NavLink>
                     ))}
-                    <span className='font-bold uppercase text-xs'> Management</span>
+                    <span className='font-bold uppercase text-xs text-pri'>• Management</span>
                     {navItems?.webappNavItems?.map(({ label, path, icon }) => (
                         <NavLink
                             key={label}
-                            onClick={()=>setIsSidebarOpen(false)}
+                            onClick={() => setIsSidebarOpen(false)}
                             to={path}
-                            onClick={()=>setIsSidebarOpen(false)}
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm 
                       ${isActive ? ' font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
                             }
                         >
-                           {({ isActive }) => (
+                            {({ isActive }) => (
                                 <>
-                                    <span className=" flex items-center gap-3">
+                                    <span className=" text-base flex items-center gap-3">
                                         {isActive && "•"}
                                         {icon}
                                     </span>
@@ -89,7 +88,10 @@ export default function Sidebar({ navItems }) {
                             >
                                 <FiSettings size={16} />
                             </button>
-                            <OverlayPanel ref={op} className="w-40 shadow-md rounded-md">
+                            <OverlayPanel
+                                ref={op}
+                                className=" w-40 shadow-md rounded-md"
+                            >
                                 <ul className="text-sm text-gray-700">
                                     {settingItems.map(item => (
                                         <li
@@ -103,6 +105,7 @@ export default function Sidebar({ navItems }) {
                                 </ul>
                             </OverlayPanel>
 
+
                             <button className="text-black p-2 rounded-full">
                                 <FiBell size={16} />
                             </button>
@@ -113,12 +116,14 @@ export default function Sidebar({ navItems }) {
                             <img
                                 src="https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--boys-male-man-pack-avatars-icons-5187865.png?f=webp"
                                 alt="profile"
-                                className="w-10 h-10 rounded-full object-cover border-2 border-lightpri mx-auto"
+                                onClick={() => setProfileDialog(true)}
+                                className="w-10 h-10 cursor-pointer rounded-full object-cover border-2 border-lightpri mx-auto"
                             />
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }
