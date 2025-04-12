@@ -173,6 +173,7 @@ import React, { useState } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { FiEdit2 } from 'react-icons/fi';
 import { IoIosTrash } from 'react-icons/io';
+import { FaTrash } from 'react-icons/fa';
 
 const initialFaqs = [
   { question: "What services does Mylstech offer?", answer: "Mylstech provides ZATCA compliance, software dev, UI/UX design, etc.", image: "https://mylstech.com/assets/services3d-iyYuJ_fd.png" },
@@ -287,19 +288,12 @@ export default function FaqTable() {
                 </td>
 
 
-                <td className="py-3 px-4 flex gap-2">
-                  <button
-                    className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
-                    onClick={() => openEditDialog(item, idx)}
-                  >
-                    <FiEdit2 />
-                  </button>
-                  <button
-                    className="text-lg text-white bg-blue-900 py-2 px-4 rounded-lg"
-                    onClick={() => handleDelete(idx)}
-                  >
-                    <IoIosTrash />
-                  </button>
+                
+                <td className="py-3 px-4 flex ">
+                  <span className='border flex w-full rounded-lg overflow-hidden'>
+                    <button onClick={() => openEditDialog(item, idx)} className="text-sm w-1/2 px-3 py-2 h-full flex justify-center items-center  text-pri border-r "> <FiEdit2 /></button>
+                    <button onClick={() => handleDelete(idx)} className="text-sm w-1/2 px-3 py-2 h-full flex justify-center items-center  bg-white text-red-500 "><FaTrash /></button>
+                  </span>
                 </td>
               </tr>
             ))}

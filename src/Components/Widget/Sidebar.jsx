@@ -59,19 +59,12 @@ export default function Sidebar({ navItems }) {
                             onClick={() => setIsSidebarOpen(false)}
                             to={path}
                             className={({ isActive }) =>
-                                `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm 
-                      ${isActive ? ' font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
+                                `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-pri text-white shadow' : 'text-gray-500 hover:bg-white hover:text-black'
+                                }`
                             }
                         >
-                            {({ isActive }) => (
-                                <>
-                                    <span className=" text-base flex items-center gap-3">
-                                        {isActive && "•"}
-                                        {icon}
-                                    </span>
-                                    <span className="ml-3 uppercase">{label}</span>
-                                </>
-                            )}
+                             <span className="text-base">{icon}</span>
+                             <span className="ml-3 uppercase">{label}</span>
                         </NavLink>
 
                     ))}

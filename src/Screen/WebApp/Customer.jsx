@@ -55,7 +55,7 @@ export default function Customer() {
                                 <td className="py-3 px-4">{customer.joinDate}</td>
                                 <td className="py-3 px-4 flex ">
                                     <span className='border flex w-full rounded-lg overflow-hidden'>
-                                        <button className="text-sm w-1/2 px-3 py-2 h-full flex justify-center items-center  bg-pri text-white "> <FiEdit2 /></button>
+                                        <button className="text-sm w-1/2 px-3 py-2 h-full flex justify-center items-center  text-pri border-r "> <FiEdit2 /></button>
                                         <button className="text-sm w-1/2 px-3 py-2 h-full flex justify-center items-center  bg-white text-red-500 "><FaTrash /></button>
                                     </span>
                                 </td>

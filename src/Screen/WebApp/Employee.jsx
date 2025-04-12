@@ -88,7 +88,7 @@ export default function Employee() {
 
                                     <td className="py-3 px-4 flex justify-center items-center">
                                         <span className='border flex w-full rounded-lg overflow-hidden'>
-                                            <button onClick={()=>setDialogVisible(true)} className="text-sm w-1/2 px-3 py-2 flex justify-center items-center bg-pri text-white">
+                                            <button onClick={()=>setDialogVisible(true)} className="text-sm w-1/2 px-3 py-2 h-full flex justify-center items-center  text-pri border-r ">
                                                 <FiEdit2 />
                                             </button>
                                             <button className="text-sm w-1/2 px-3 py-2 flex justify-center items-center bg-white text-red-500">
