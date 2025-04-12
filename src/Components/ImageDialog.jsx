@@ -11,7 +11,7 @@ function ImageDialog({ images }) {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4">
+    <div className="w-full h-full max-w-2xl mx-auto p-4">
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -26,7 +26,7 @@ function ImageDialog({ images }) {
             <img
               src={imgUrl}
               alt={`Slide ${index + 1}`}
-              className="w-full h-auto object-cover rounded"
+              className="w-full md:h-[50vh] h-[30vh] object-cover rounded"
             />
           </SwiperSlide>
         ))}

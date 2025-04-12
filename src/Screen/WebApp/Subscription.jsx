@@ -161,7 +161,7 @@ const SubscriptionCard = ({ plan, onEdit, onDelete, onToggleHold }) => (
         <span className="text-xs">{plan.isActive ? 'Active' : 'On Hold'}</span>
       </div>
       <Button
-        icon="pi pi-trash text-lg"
+        icon="pi pi-trash text-red-600 text-lg"
         className="p-button-sm p-button-text p-button-danger focus:ring-0"
         onClick={() => onDelete(plan.title)}
       />

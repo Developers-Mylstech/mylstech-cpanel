@@ -42,6 +42,7 @@ export default function Sidebar({ navItems }) {
                             key={label}
                             onClick={()=>setIsSidebarOpen(false)}
                             to={path}
+                      
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm font-medium ${isActive ? 'bg-pri text-white shadow' : 'text-gray-500 hover:bg-white hover:text-black'
                                 }`
@@ -57,6 +58,7 @@ export default function Sidebar({ navItems }) {
                             key={label}
                             onClick={()=>setIsSidebarOpen(false)}
                             to={path}
+                            onClick={()=>setIsSidebarOpen(false)}
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm 
                       ${isActive ? ' font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
