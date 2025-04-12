@@ -17,8 +17,11 @@ export default function Sidebar({ navItems }) {
     ];
 
     return (
-        <div style={{ backgroundImage: "url('https://static.vecteezy.com/system/resources/thumbnails/024/238/800/small/blobs-mesh-gradient-transparent-that-faded-png.png')", backgroundPosition: "top  left" }}
-            className="w-64 min-h-screen bg-no-repeat bg-contain  border-r  flex flex-col justify-between relative mx-auto items-center"
+        // <div style={{ backgroundImage: "url('https://static.vecteezy.com/system/resources/thumbnails/024/238/800/small/blobs-mesh-gradient-transparent-that-faded-png.png')", backgroundPosition: "top  left" }}
+        //     className="w-64 min-h-screen bg-no-repeat bg-contain  border-r  flex flex-col justify-between relative mx-auto items-center"
+        // >
+        <div
+            className="w-64 min-h-screen bg-no-repeat  bg-contain  border-r 0 flex flex-col justify-between relative mx-auto items-center"
         >
             <div className="w-full  flex flex-col items-center  backdrop-blur-2xl   ">
                 <div className="my-6 flex justify-between items-center w-full px-4 md:px-6">
@@ -52,15 +55,16 @@ export default function Sidebar({ navItems }) {
                     {navItems?.webappNavItems?.map(({ label, path, icon }) => (
                         <NavLink
                             key={label}
+                            onClick={()=>setIsSidebarOpen(false)}
                             to={path}
                             className={({ isActive }) =>
                                 `flex items-center px-4 py-3 rounded-lg transition-all duration-200 text-sm 
-                      ${isActive ? 'ml-3 font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
+                      ${isActive ? ' font-bold text-blue-800' : 'text-gray-500 hover:text-black font-medium'}`
                             }
                         >
-                            {({ isActive }) => (
+                           {({ isActive }) => (
                                 <>
-                                    <span className="text-lg flex items-center gap-3">
+                                    <span className=" flex items-center gap-3">
                                         {isActive && "•"}
                                         {icon}
                                     </span>

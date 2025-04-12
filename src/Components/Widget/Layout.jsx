@@ -46,7 +46,7 @@ export default function Layout() {
       </div>
 
       <div
-        className={`fixed top-0 left-0 scrollbar-hide h-full w-64 bg-white overflow-y-auto z-40 transform transition-transform duration-300 
+        className={`fixed top-0 left-0 scrollbar-hide h-full backdrop-blur-xl w-64 overflow-y-auto z-40 transform transition-transform duration-300 
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
         md:translate-x-0`}
       >

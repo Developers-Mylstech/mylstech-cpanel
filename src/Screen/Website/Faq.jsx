@@ -214,9 +214,7 @@ export default function FaqTable() {
         <thead className="bg-gray-100 text-gray-400 text-left uppercase text-xs">
           <tr>
             <th className="py-3 px-4 font-normal">Image</th>
-            <th className="py-3 px-4 font-medium">Question</th>
-            <th className="py-3 px-4 font-normal">Answer</th>
-   
+            <th className="py-3 px-4 font-medium">Question / Answer</th>   
             <th className="py-3 px-4 font-normal">Actions</th>
           </tr>
         </thead>
@@ -232,10 +230,9 @@ export default function FaqTable() {
               </td>
               <td className="py-3 px-4 font-semibold text-sm text-gray-800">
                 {item.question}
+                <p className='text-gray-400 font-normal text-xs'> {item.answer}</p>
               </td>
-              <td className="py-3 px-4 text-sm text-gray-600">
-                {item.answer}
-              </td>
+             
               
               <td className="py-3 px-4 flex gap-2">
                 <button
